@@ -14,8 +14,9 @@ OBJS += $(patsubst $(IMGUI_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(IMGUI_SRC))
 OBJS += $(patsubst $(IMGUI_DIR)/backends/%.cpp,$(OBJ_DIR)/%.o,$(filter $(IMGUI_DIR)/backends/%.cpp,$(SOURCES)))
 UNAME_S := $(shell uname -s)
 LINUX_GL_LIBS = -lGL
+SDL_DIR := ./SDL
 
-CXXFLAGS = -std=c++17 -I$(IMGUI_DIR) -I$(IMGUI_DIR)/backends -I./include
+CXXFLAGS = -std=c++17 -I$(IMGUI_DIR) -I$(IMGUI_DIR)/backends -I./include -I$(SDL_DIR)/include
 CXXFLAGS += -g -Wall -Wformat
 LIBS =
 
