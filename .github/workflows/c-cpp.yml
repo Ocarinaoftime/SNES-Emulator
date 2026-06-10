@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: sdl-cmake
+      run: cd SDL;cmake .
     - name: make
       run: make
 
